@@ -1,0 +1,578 @@
+:root {
+    /* Paleta LinkLab */
+    --color-acento: #B8A9FF;     /* Morado pastel */
+    --color-accion: #FFA85A;     /* Naranja suave */
+    --color-suave: #EDE9FF;      /* Morado claro */
+    --color-texto: #575757;      /* Texto principal */
+    --color-titulos: #171717;    /* Títulos destacados */
+    --color-fondo: #ffffff;      /* Fondo general */
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  /* ---------- ELEMENTOS GENERALES ---------- */
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--color-acento);
+  }
+  
+  /* ---------- ENCABEZADO / HERO ---------- */
+  
+  .hero {
+    background: linear-gradient(135deg, var(--color-acento), var(--color-accion));
+    color: var(--color-fondo);
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .hero h1 span {
+    font-size: 2.8rem;
+  }
+  
+  header a {
+    color: var(--color-fondo);
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  header a:hover {
+    color: var(--color-accion);
+  }
+  
+  /* ---------- CONTAINERS ---------- */
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+  
+  /* ---------- BOTONES ---------- */
+  
+  .btn {
+    background: var(--color-fondo);
+    color: var(--color-acento);
+    padding: 10px 25px;
+    border-radius: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  
+  .btn:hover {
+    background: var(--color-acento);
+    color: var(--color-fondo);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  
+  .btn-outline {
+    border: 2px solid var(--color-acento);
+    padding: 10px 25px;
+    border-radius: 30px;
+    display: inline-block;
+    color: var(--color-acento);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-outline:hover {
+    background: var(--color-acento);
+    color: var(--color-fondo);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  
+  /* ---------- SECCIONES ---------- */
+  
+  .section {
+    padding: 75px 0;
+  }
+
+  .section h2 {
+    font-size: 2.2rem;
+    color: var(--color-titulos);
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: var(--color-acento);
+    margin-top: 8px;
+    border-radius: 2px;
+  }
+  
+
+  .section.alt {
+  background-color: var(--color-accion);
+}
+  
+  /* ---------- SOBRE MÍ ---------- */
+  
+  .about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+  }
+  
+ /* ---------- IMAGENES ---------- */
+
+  .perfil-img {
+    width: 220px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .perfil-img:hover {
+    transform: scale(1.05);
+  }
+
+
+  /* ---------- PROYECTOS ---------- */
+
+  .grid-stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+  }
+  
+  .stack-box {
+    background-color: var(--color-suave);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .stack-box:hover {
+    transform: translateY(-6px);
+  }
+  
+  .stack-box h3 {
+    margin-bottom: 15px;
+    color: var(--color-titulos);
+  }
+  
+  .stack-box ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .stack-box ul li {
+    margin-bottom: 10px;
+    color: var(--color-texto);
+    font-weight: 400;
+  }
+  
+
+  .about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .about-grid > div {
+    flex: 1;
+  }
+  
+  .about-grid .perfil-img {
+    width: 280px;
+    max-width: 100%;
+  }  
+
+  .grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .proyecto {
+    background: var(--color-suave);
+    color: var(--color-texto);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .proyecto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  
+  @media (max-width: 768px) {
+    .about-grid {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-grid .perfil-img {
+      margin: 0 auto;
+    }
+  }
+
+  .proyecto a {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: var(--color-acento);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .proyecto a:hover {
+    color: var(--color-accion);
+  }
+  
+  .proyecto-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  }
+  
+  
+  /* ---------- ETIQUETAS ---------- */
+  
+  .badge {
+    display: inline-block;
+    background: var(--color-acento);
+    color: var(--color-fondo);
+    padding: 5px 10px;
+    margin: 5px 5px 0 0;
+    border-radius: 12px;
+    font-size: 0.8rem;
+  }
+  
+  /* ---------- FORMULARIO ---------- */
+  
+  form input, form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    font-family: inherit;
+  }
+  
+  form textarea {
+    height: 120px;
+  }
+  
+  /* ---------- REDES SOCIALES ---------- */
+  
+  .social {
+    margin-top: 20px;
+  }
+  
+  .social a {
+    margin-right: 15px;
+    color: var(--color-acento);
+    font-weight: bold;
+  }
+  
+  /* ---------- FOOTER ---------- */
+  
+  footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+  
+  /* ---------- RESPONSIVE ---------- */
+  
+  @media (max-width: 768px) {
+    .hero h1 span {
+      font-size: 2rem;
+    }
+  
+    .about-grid {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .perfil-img {
+      width: 150px;
+      margin: 0 auto;
+    }
+  
+    .grid-proyectos {
+      grid-template-columns: 1fr;
+    }
+  
+    .btn,
+    .btn-outline {
+      width: 100%;
+      text-align: center;
+    }
+  
+    form input,
+    form textarea {
+      font-size: 1rem;
+    }
+  }
+  
+  /* ---------- ANIMACIONES ---------- */
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .fade-in-delay {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  /* ==== NAVBAR STICKY ==== */
+  .navbar {
+    background-color: var(--color-fondo);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(to right, var(--color-acento), var(--color-accion));
+    border-image-slice: 1;
+  }
+  
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--color-titulos);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: var(--color-texto);
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--color-acento);
+  }
+  
+  /* === Estilos en modo oscuro === */
+  body.dark-mode {
+    background-color: #171717;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode .section,
+  body.dark-mode .proyecto,
+  body.dark-mode .stack-box {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .badge {
+    background: #444;
+    color: #fff;
+  }
+  
+  body.dark-mode a {
+    color: #B8A9FF;
+  }
+  
+  body.dark-mode .btn,
+  body.dark-mode .btn-outline {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-color: #B8A9FF;
+  }
+
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h3,
+  body.dark-mode p,
+  body.dark-mode li,
+  body.dark-mode label {
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode input,
+  body.dark-mode textarea {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #444;
+  }
+  
+  body.dark-mode input::placeholder,
+  body.dark-mode textarea::placeholder {
+    color: #999;
+  }
+    
+  body.dark-mode .btn,
+  body.dark-mode .btn-outline {
+    background-color: #2a2a2a;
+    color: var(--color-acento);
+    border-color: var(--color-acento);
+  }
+  
+  body.dark-mode a:hover {
+    color: var(--color-accion);
+  }
+
+  body.dark-mode .section.alt {
+    background-color: #1f1f1f;
+  }
+  
+  .testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .testimonio {
+    background: #EDE9FF; /* Lila claro */
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  
+  .testimonio:hover {
+    transform: translateY(-5px);
+  }
+  
+  .testimonio .estrella {
+    color: #ffc107;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .testimonio p {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: var(--color-texto);
+  }
+  
+  .testimonio h4 {
+    margin: 0;
+    font-weight: 600;
+    color: var(--color-titulos);
+  }
+  
+  #scrollTopBtn {
+    position: fixed;
+    bottom: 100px;      /* MÁS arriba que el botón de la luna */
+    right: 20px;        /* Un poco hacia adentro */
+    z-index: 1000;      /* Encima del resto */
+    background: var(--morado);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 14px 16px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: none;      /* Oculto hasta que hagas scroll */
+    transition: all 0.3s ease;
+  }
+  
+  #scrollTopBtn:hover {
+    background: var(--azul);
+    transform: translateY(-2px);
+  }
+  
+  
+  /* Modo oscuro */
+  body.dark-mode #scrollTopBtn {
+    background: #fff;
+    color: var(--negro);
+  }
+  
+ /* === Botón de modo oscuro === */
+
+  #darkModeToggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background: var(--morado);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 12px 14px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: background 0.3s ease;
+  }
+  
+    #darkModeToggle:hover {
+        background: var(--color-accion);
+      }
+
+      .idioma-btn {
+        margin-left: 1rem;
+        font-size: 1.2rem;
+        padding: 6px 12px;
+        border-radius: 30px;
+        background: var(--blanco);
+        color: var(--morado);
+        border: 2px solid var(--morado);
+        transition: all 0.3s ease;
+      }
+      
+      .idioma-btn:hover {
+        background: var(--morado);
+        color: var(--blanco);
+      }
+      
