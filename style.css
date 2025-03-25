@@ -527,6 +527,17 @@
     background-color: #1f1f1f;
   }
   
+  body.dark-mode .testimonio {
+    background-color: #EDE9FF !important; /* fondo lila claro */
+    color: #1a1a1a !important; /* texto oscuro */
+  }
+  
+  body.dark-mode .testimonio p,
+  body.dark-mode .testimonio h4 {
+    color: #1a1a1a !important; /* texto oscuro */
+  }
+  
+  
   .testimonios-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
